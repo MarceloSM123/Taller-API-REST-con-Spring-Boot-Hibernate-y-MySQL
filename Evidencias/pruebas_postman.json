@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "API Películas - Hibernate JPA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Película",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Interstellar\",\n    \"director\": \"Christopher Nolan\",\n    \"genero\": \"Ciencia Ficcion\",\n    \"duracion\": 169,\n    \"disponible\": true\n}"
+        },
+        "url": {"raw": "http://localhost:8080/peliculas", "host": ["localhost"], "port": "8080", "path": ["peliculas"]}
+      }
+    },
+    {
+      "name": "Listar Películas",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8080/peliculas", "host": ["localhost"], "port": "8080", "path": ["peliculas"]}
+      }
+    },
+    {
+      "name": "Buscar por ID",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8080/peliculas/1", "host": ["localhost"], "port": "8080", "path": ["peliculas", "1"]}
+      }
+    },
+    {
+      "name": "Actualizar Película",
+      "request": {
+        "method": "PUT",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Interstellar Actualizada\",\n    \"director\": \"Christopher Nolan\",\n    \"genero\": \"Ciencia Ficcion\",\n    \"duracion\": 169,\n    \"disponible\": false\n}"
+        },
+        "url": {"raw": "http://localhost:8080/peliculas/1", "host": ["localhost"], "port": "8080", "path": ["peliculas", "1"]}
+      }
+    },
+    {
+      "name": "Eliminar Película",
+      "request": {
+        "method": "DELETE",
+        "url": {"raw": "http://localhost:8080/peliculas/4", "host": ["localhost"], "port": "8080", "path": ["peliculas", "4"]}
+      }
+    },
+    {
+      "name": "Buscar por Género",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8080/peliculas/genero?genero=Drama", "host": ["localhost"], "port": "8080", "path": ["peliculas", "genero"], "query": [{"key": "genero", "value": "Drama"}]}
+      }
+    },
+    {
+      "name": "Buscar por Disponibilidad",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8080/peliculas/disponible?disponible=true", "host": ["localhost"], "port": "8080", "path": ["peliculas", "disponible"], "query": [{"key": "disponible", "value": "true"}]}
+      }
+    }
+  ]
+}
