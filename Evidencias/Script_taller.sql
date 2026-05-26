@@ -7,4 +7,6 @@ CREATE DATABASE apihibernate;
 -- USAR LA BASE DE DATOS
 USE apihibernate;
 
+select * from peliculas
+
 
