@@ -27,7 +27,9 @@ public class Pelicula {
 
     @Column(nullable = false)
     private boolean disponible;
-
+    
+    @Column(nullable = true)
+    private double calificacion;
     
     public Pelicula() {
     }
@@ -87,6 +89,14 @@ public class Pelicula {
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+    
+    public double getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(double calificacion) {
+        this.calificacion = calificacion;
     }
 
     @Override
